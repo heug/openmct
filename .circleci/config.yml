@@ -10,6 +10,9 @@ jobs:
           name: update-npm
           command: 'sudo npm install -g npm@5.0.3'
       - run:
+          name: check version
+          command: npm --version
+      - run:
           name: install-npm
           command: npm install
       - run:
