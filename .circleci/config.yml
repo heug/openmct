@@ -3,15 +3,15 @@ jobs:
   build:
     working_directory: ~/openmct
     docker:
-      - image: circleci/node:6.11.0
+      - image: circleci/node:4.8.2
     steps:
       - checkout
       - run:
           name: update-npm
-          command: 'sudo npm install -g npm@5.0.3'
-      - run:
-          name: check version
-          command: npm --version
+          command: 'sudo npm install -g npm@latest'
+      # - run:
+      #     name: check version
+      #     command: npm --version
       - run:
           name: install-npm
           command: npm install
